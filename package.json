@@ -1,0 +1,28 @@
+{
+  "name": "ocr_poc",
+  "version": "1.0.0",
+  "description": "Optical Character Recognition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saranvlmna/poc_ocr.git"
+  },
+  "keywords": [
+    "OCR",
+    "AZURE"
+  ],
+  "author": "Saranjith P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saranvlmna/poc_ocr/issues"
+  },
+  "homepage": "https://github.com/saranvlmna/poc_ocr#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
