@@ -1,11 +1,16 @@
 const express = require("express");
+require("dotenv").config();
+const azureRouter = require("./src/computer_vision/router");
 const app = express();
 const port = 4578;
 
+app.use(express.json());
+app.use("/azure", azureRouter);
+
 app.get("/", (req, res) => {
-  res.send("hey server!");
+  res.send("Hey server!");
 });
 
-app.listen(4578, () => {
-  console.log(`server listening at ${port}`);
+app.listen(port, () => {
+  console.log(`Server listening at ${port}`);
 });
