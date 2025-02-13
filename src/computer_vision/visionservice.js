@@ -13,16 +13,17 @@ const computerVisionClient = new ComputerVisionClient(
   new ApiKeyCredentials({ inHeader: { "Ocp-Apim-Subscription-Key": key } }),
   endpoint
 );
-const imagePath = path.resolve(__dirname, "../../assets/image.png");
+// const imagePath = path.resolve(__dirname, "../../assets/image.png");
 
-module.exports = async () => {
+module.exports = async (file) => {
+  const imagePath =file
   console.log("Processing local image:", imagePath);
   try {
     const printedResult = await readTextFromFile(
       computerVisionClient,
       imagePath
     );
-    printRecText(printedResult);
+    return printRecText(printedResult);
   } catch (error) {
     console.error("Error processing image:", error);
   }
@@ -57,11 +58,14 @@ const readTextFromFile = async (client, imagePath) => {
 
 const printRecText = (readResults) => {
   console.log("Recognized text:");
+  const ocrResult = [];
   for (const result of readResults) {
     if (result.lines.length) {
       for (const line of result.lines) {
-        console.log(line.words.map((w) => w.text).join(" "));
+        ocrResult.push(line.words.map((w) => w.text).join(" "));
       }
+      console.log("Recognized text: Done");
+      return ocrResult;
     } else {
       console.log("No recognized text.");
     }
