@@ -159,7 +159,7 @@ function parseOCR(ocrArray) {
 const structuredData = parseOCR(ocrData.data);
 
 // Save structured JSON to a file
-const outputPath = path.join(__dirname, "toll_violation.json");
+const outputPath = path.join(__dirname, "../assets/output_template.json");
 
 fs.writeFileSync(outputPath, JSON.stringify(structuredData, null, 2), "utf-8");
 

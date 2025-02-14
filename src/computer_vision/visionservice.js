@@ -13,10 +13,10 @@ const computerVisionClient = new ComputerVisionClient(
   new ApiKeyCredentials({ inHeader: { "Ocp-Apim-Subscription-Key": key } }),
   endpoint
 );
-// const imagePath = path.resolve(__dirname, "../../assets/image.png");
+// const imagePath = path.resolve(__dirname, "../../assets/tollviolation.png");
 
 module.exports = async (file) => {
-  const imagePath =file
+  const imagePath = file;
   console.log("Processing local image:", imagePath);
   try {
     const printedResult = await readTextFromFile(
