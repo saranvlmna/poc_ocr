@@ -1,6 +1,6 @@
 const express = require("express");
 require("dotenv").config();
-const azureRouter = require("./src/computer_vision/router");
+const azureRouter = require("./src/router");
 const app = express();
 const port = 4578;
 

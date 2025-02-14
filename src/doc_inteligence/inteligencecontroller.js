@@ -1,8 +1,8 @@
-const azureservice = require("./visionservice");
+const inteligenceservice = require("./inteligenceservice");
 
 module.exports = async (req, res) => {
   try {
-    const result = await azureservice(req?.file?.path);
+    const result = await inteligenceservice();
     return res.json({ data: result });
   } catch (error) {
     console.log(error);

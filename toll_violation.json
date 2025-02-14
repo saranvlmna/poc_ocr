@@ -1,0 +1,36 @@
+{
+  "state": "Delaware",
+  "department": "Delaware Department of Transportation",
+  "notice_type": "NOTICE OF TOLL VIOLATION",
+  "recipient": {
+    "name": "John Doe",
+    "address": "26 OLD RUDNICK LANE, DOVER, DE 19901"
+  },
+  "notice_details": {
+    "notice_date": "02/01/2017",
+    "respond_by": "02/18/2017",
+    "violation_notice_number": "VPSN0012345678"
+  },
+  "violation_details": {
+    "violation_id": "VPSN0012345678",
+    "date": "Time:",
+    "time": "12:07:15",
+    "plaza": "NEWARK",
+    "lane": "4",
+    "license_plate": "JOHNDOE01",
+    "state": "DE"
+  },
+  "payment_details": {
+    "payment_due_by": "02/18/2017",
+    "civil_penalty_charge": 25,
+    "civil_penalty_surcharge": 12.5,
+    "toll_due": 1,
+    "administrative_fee": 25,
+    "balance_due": 51
+  },
+  "contact_info": {
+    "phone": "1-888-397-2773",
+    "mail_to": "TO DISPUTE: You have the right to APPEAL the total amount due., undefined"
+  },
+  "dispute_information": "TO DISPUTE: You have the right to APPEAL the total amount due."
+}

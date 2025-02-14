@@ -22,7 +22,11 @@
   },
   "homepage": "https://github.com/saranvlmna/poc_ocr#readme",
   "dependencies": {
+    "@azure-rest/ai-document-intelligence": "^1.0.0",
+    "@azure/ai-form-recognizer": "^5.0.0",
     "@azure/cognitiveservices-computervision": "^8.2.0",
+    "@azure/core-auth": "^1.9.0",
+    "@azure/identity": "^4.6.0",
     "async": "^3.2.6",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
