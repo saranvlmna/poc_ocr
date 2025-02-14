@@ -1,0 +1,793 @@
+{
+  "AmountDue": {
+    "kind": "currency",
+    "value": { "amount": 51, "currencySymbol": "$", "currencyCode": "USD" },
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 7.373, "y": 7.9397 },
+          { "x": 8.0034, "y": 7.9397 },
+          { "x": 8.0034, "y": 8.0924 },
+          { "x": 7.373, "y": 8.0924 }
+        ]
+      }
+    ],
+    "content": "$\n51.00",
+    "spans": [{ "offset": 1448, "length": 7 }],
+    "confidence": 0.89
+  },
+  "CustomerAddress": {
+    "kind": "address",
+    "value": {
+      "houseNumber": "26",
+      "road": "OLD RUDNICK LANE",
+      "city": "DOVER",
+      "state": "DE",
+      "postalCode": "19901",
+      "streetAddress": "26 OLD RUDNICK LANE"
+    },
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 0.9264, "y": 2.01 },
+          { "x": 2.7601, "y": 2.01 },
+          { "x": 2.7601, "y": 2.4444 },
+          { "x": 0.9264, "y": 2.4444 }
+        ]
+      }
+    ],
+    "content": "26 OLD RUDNICK LANE\nDOVER, DE 19901",
+    "spans": [
+      { "offset": 201, "length": 19 },
+      { "offset": 245, "length": 15 }
+    ],
+    "confidence": 0.842  },
+  "CustomerAddressRecipient": {
+    "kind": "string",
+    "value": "John Doe",
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 0.9264, "y": 1.7683 },
+          { "x": 1.5676, "y": 1.7737 },
+          { "x": 1.5663, "y": 1.9341 },
+          { "x": 0.9251, "y": 1.9287 }
+        ]
+      }
+    ],
+    "content": "John Doe",
+    "spans": [{ "offset": 192, "length": 8 }],
+    "confidence": 0.788
+  },
+  "CustomerName": {
+    "kind": "string",
+    "value": "John Doe",
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 0.9264, "y": 1.7683 },
+          { "x": 1.5676, "y": 1.7737 },
+          { "x": 1.5663, "y": 1.9341 },
+          { "x": 0.9251, "y": 1.9287 }
+        ]
+      }
+    ],
+    "content": "John Doe",
+    "spans": [{ "offset": 192, "length": 8 }],
+    "confidence": 0.788
+  },
+  "DueDate": {
+    "kind": "date",
+    "value": "2017-02-18T00:00:00.000Z",
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 7.0722, "y": 6.0156 },
+          { "x": 7.7646, "y": 6.0204 },
+          { "x": 7.7646, "y": 6.1493 },
+          { "x": 7.077, "y": 6.1493 }
+        ]
+      }
+    ],
+    "content": "02/18/2017",
+    "spans": [{ "offset": 844, "length": 10 }],
+    "confidence": 0.937
+  },
+  "InvoiceDate": {
+    "kind": "date",
+    "value": "2017-02-01T00:00:00.000Z",
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 6.9671, "y": 2.0052 },
+          { "x": 7.6213, "y": 2.0052 },
+          { "x": 7.6213, "y": 2.1675 },
+          { "x": 6.9624, "y": 2.1675 }
+        ]
+      }
+    ],
+    "content": "02/01/2017",
+    "spans": [{ "offset": 234, "length": 10 }],
+    "confidence": 0.927
+  },
+  "InvoiceId": {
+    "kind": "string",
+    "value": "0001234567-1",
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 1.0792, "y": 3.5378 },
+          { "x": 2.1489, "y": 3.5378 },
+          { "x": 2.1489, "y": 3.7049 },
+          { "x": 1.084, "y": 3.7001 }
+        ]
+      }
+    ],
+    "content": "0001234567-1",
+    "spans": [{ "offset": 407, "length": 12 }],
+    "confidence": 0.535
+  },
+  "InvoiceTotal": {
+    "kind": "currency",
+    "value": { "amount": 51, "currencySymbol": "$", "currencyCode": "USD" },
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 7.373, "y": 7.9397 },
+          { "x": 8.0034, "y": 7.9397 },
+          { "x": 8.0034, "y": 8.0924 },
+          { "x": 7.373, "y": 8.0924 }
+        ]
+      }
+    ],
+    "content": "$\n51.00",
+    "spans": [{ "offset": 1448, "length": 7 }],
+    "confidence": 0.89
+  },
+  "Items": {
+    "kind": "array",
+    "values": [
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": {
+              "amount": 1,
+              "currencySymbol": "$",
+              "currencyCode": "USD"
+            },
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 7.3779, "y": 6.6254 },
+                  { "x": 7.9986, "y": 6.6315 },
+                  { "x": 7.9973, "y": 6.7664 },
+                  { "x": 7.3765, "y": 6.7604 }
+                ]
+              }
+            ],
+            "content": "$\n1.00",
+            "spans": [{ "offset": 1064, "length": 6 }],
+            "confidence": 0.852
+          },
+          "Description": {
+            "kind": "string",
+            "value": "TOLL DUE:",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 5.3293, "y": 6.6166 },
+                  { "x": 6.0379, "y": 6.6268 },
+                  { "x": 6.0359, "y": 6.7706 },
+                  { "x": 5.3272, "y": 6.7604 }
+                ]
+              }
+            ],
+            "content": "TOLL DUE:",
+            "spans": [{ "offset": 1054, "length": 9 }],
+            "confidence": 0.795
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              { "x": 5.3294, "y": 6.6055 },
+              { "x": 7.9986, "y": 6.6315 },
+              { "x": 7.9971, "y": 6.7879 },
+              { "x": 5.3278, "y": 6.7619 }
+            ]
+          }
+        ],
+        "content": "TOLL DUE:\n$\n1.00",
+        "spans": [{ "offset": 1054, "length": 16 }],
+        "confidence": 0.834
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": {
+              "amount": 25,
+              "currencySymbol": "$",
+              "currencyCode": "USD"
+            },
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 7.3735, "y": 6.8745 },
+                  { "x": 8.0026, "y": 6.8942 },
+                  { "x": 7.9981, "y": 7.0402 },
+                  { "x": 7.3689, "y": 7.0205 }
+                ]
+              }
+            ],
+            "content": "$\n25.00",
+            "spans": [{ "offset": 1165, "length": 7 }],
+            "confidence": 0.845
+          },
+          "Description": {
+            "kind": "string",
+            "value": "ADMINISTRATIVE FEE:",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 5.3292, "y": 6.8893 },
+                  { "x": 6.8287, "y": 6.8893 },
+                  { "x": 6.8287, "y": 7.0326 },
+                  { "x": 5.3292, "y": 7.0326 }
+                ]
+              }
+            ],
+            "content": "ADMINISTRATIVE FEE:",
+            "spans": [{ "offset": 1145, "length": 19 }],
+            "confidence": 0.837
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              { "x": 5.3292, "y": 6.8893 },
+              { "x": 7.9986, "y": 6.8893 },
+              { "x": 7.9986, "y": 7.0326 },
+              { "x": 5.3292, "y": 7.0326 }
+            ]
+          }
+        ],
+        "content": "ADMINISTRATIVE FEE:\n$\n25.00",
+        "spans": [{ "offset": 1145, "length": 27 }],
+        "confidence": 0.897
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": {
+              "amount": 0,
+              "currencySymbol": "$",
+              "currencyCode": "USD"
+            },
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 7.3784, "y": 7.14 },
+                  { "x": 8.0029, "y": 7.1616 },
+                  { "x": 7.9978, "y": 7.3096 },
+                  { "x": 7.3733, "y": 7.2879 }
+                ]
+              }
+            ],
+            "content": "$\n0.00",
+            "spans": [{ "offset": 1209, "length": 6 }],
+            "confidence": 0.846
+          },
+          "Description": {
+            "kind": "string",
+            "value": "AMBULANCE CO. FUND:",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 5.3244, "y": 7.1519 },
+                  { "x": 6.9433, "y": 7.1519 },
+                  { "x": 6.9433, "y": 7.2904 },
+                  { "x": 5.3244, "y": 7.2904 }
+                ]
+              }
+            ],
+            "content": "AMBULANCE CO. FUND:",
+            "spans": [{ "offset": 1189, "length": 19 }],
+            "confidence": 0.841
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              { "x": 5.3244, "y": 7.1519 },
+              { "x": 7.9986, "y": 7.1519 },
+              { "x": 7.9986, "y": 7.2904 },
+              { "x": 5.3244, "y": 7.2904 }
+            ]
+          }
+        ],
+        "content": "AMBULANCE CO. FUND:\n$\n0.00",
+        "spans": [{ "offset": 1189, "length": 26 }],
+        "confidence": 0.898
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": {
+              "amount": 0,
+              "currencySymbol": "$",
+              "currencyCode": "USD"
+            },
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 7.3687, "y": 7.403 },
+                  { "x": 7.998, "y": 7.4241 },
+                  { "x": 7.993, "y": 7.5715 },
+                  { "x": 7.3637, "y": 7.5504 }
+                ]
+              }
+            ],
+            "content": "$\n0.00",
+            "spans": [{ "offset": 1290, "length": 6 }],
+            "confidence": 0.84
+          },
+          "Description": {
+            "kind": "string",
+            "value": "COMBAT VIOLENT CRIMES:",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 5.3197, "y": 7.4119 },
+                  { "x": 7.1587, "y": 7.4193 },
+                  { "x": 7.1581, "y": 7.5675 },
+                  { "x": 5.3191, "y": 7.5601 }
+                ]
+              }
+            ],
+            "content": "COMBAT VIOLENT CRIMES:",
+            "spans": [{ "offset": 1267, "length": 22 }],
+            "confidence": 0.843
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              { "x": 5.3197, "y": 7.4059 },
+              { "x": 7.9943, "y": 7.4168 },
+              { "x": 7.9937, "y": 7.571 },
+              { "x": 5.3191, "y": 7.5601 }
+            ]
+          }
+        ],
+        "content": "COMBAT VIOLENT CRIMES:\n$\n0.00",
+        "spans": [{ "offset": 1267, "length": 29 }],
+        "confidence": 0.898
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": {
+              "amount": 0,
+              "currencySymbol": "$",
+              "currencyCode": "USD"
+            },
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 7.3737, "y": 7.6607 },
+                  { "x": 8.0031, "y": 7.6821 },
+                  { "x": 7.998, "y": 7.8344 },
+                  { "x": 7.3686, "y": 7.8131 }
+                ]
+              }
+            ],
+            "content": "$\n0.00",
+            "spans": [{ "offset": 1334, "length": 6 }],
+            "confidence": 0.742
+          },
+          "Description": {
+            "kind": "string",
+            "value": "PAYMENT/ADJ/OTHER:",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  { "x": 5.3149, "y": 7.6771 },
+                  { "x": 6.8334, "y": 7.6771 },
+                  { "x": 6.8334, "y": 7.8203 },
+                  { "x": 5.3197, "y": 7.8203 }
+                ]
+              }
+            ],
+            "content": "PAYMENT/ADJ/OTHER:",
+            "spans": [{ "offset": 1315, "length": 18 }],
+            "confidence": 0.725
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              { "x": 5.3151, "y": 7.6583 },
+              { "x": 7.9998, "y": 7.6819 },
+              { "x": 7.9984, "y": 7.8438 },
+              { "x": 5.3136, "y": 7.8202 }
+            ]
+          }
+        ],
+        "content": "PAYMENT/ADJ/OTHER:\n$\n0.00",
+        "spans": [{ "offset": 1315, "length": 25 }],
+        "confidence": 0.77
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": { "amount": 25, "currencyCode": "USD" },
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 7.5784, "y": 2.3299 },
+                  { "x": 7.8362, "y": 2.3299 },
+                  { "x": 7.8362, "y": 2.4349 },
+                  { "x": 7.5784, "y": 2.4349 }
+                ]
+              }
+            ],
+            "content": "25.00",
+            "spans": [{ "offset": 2832, "length": 5 }],
+            "confidence": 0.731
+          },
+          "Description": {
+            "kind": "string",
+            "value": "Administrative Fee - 21 Del. C. § 4127",
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 0.5014, "y": 2.3299 },
+                  { "x": 2.3972, "y": 2.3299 },
+                  { "x": 2.3972, "y": 2.4588 },
+                  { "x": 0.5014, "y": 2.4588 }
+                ]
+              }
+            ],
+            "content": "Administrative Fee - 21 Del. C. § 4127",
+            "spans": [{ "offset": 2791, "length": 38 }],
+            "confidence": 0.493
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 2,
+            "polygon": [
+              { "x": 0.5014, "y": 2.3251 },
+              { "x": 7.8362, "y": 2.3251 },
+              { "x": 7.8362, "y": 2.4588 },
+              { "x": 0.5014, "y": 2.4588 }
+            ]
+          }
+        ],
+        "content": "Administrative Fee - 21 Del. C. § 4127\n$\n25.00",
+        "spans": [{ "offset": 2791, "length": 46 }],
+        "confidence": 0.604
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": { "amount": 10, "currencyCode": "USD" },
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 7.5831, "y": 2.5972 },
+                  { "x": 7.841, "y": 2.5972 },
+                  { "x": 7.841, "y": 2.7023 },
+                  { "x": 7.5831, "y": 2.7023 }
+                ]
+              }
+            ],
+            "content": "10.00",
+            "spans": [{ "offset": 2940, "length": 5 }],
+            "confidence": 0.742
+          },
+          "Description": {
+            "kind": "string",
+            "value": "House Bill State Fire Prevention Commission Volunteer Ambulance Company Fund - 11 Del. C. § 4101(h)",
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 0.5014, "y": 2.5877 },
+                  { "x": 5.6921, "y": 2.5877 },
+                  { "x": 5.6921, "y": 2.7261 },
+                  { "x": 0.5014, "y": 2.7261 }
+                ]
+              }
+            ],
+            "content": "House Bill State Fire Prevention Commission Volunteer Ambulance Company Fund - 11 Del. C. § 4101(h)",
+            "spans": [{ "offset": 2838, "length": 99 }],
+            "confidence": 0.38
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 2,
+            "polygon": [
+              { "x": 0.5014, "y": 2.5877 },
+              { "x": 7.841, "y": 2.5877 },
+              { "x": 7.841, "y": 2.7261 },
+              { "x": 0.5014, "y": 2.7261 }
+            ]
+          }
+        ],
+        "content": "House Bill State Fire Prevention Commission Volunteer Ambulance Company Fund - 11 Del. C. § 4101(h)\n$\n10.00",
+        "spans": [{ "offset": 2838, "length": 107 }],
+        "confidence": 0.609
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": { "amount": 15, "currencyCode": "USD" },
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 7.5831, "y": 2.8598 },
+                  { "x": 7.841, "y": 2.8598 },
+                  { "x": 7.841, "y": 2.9601 },
+                  { "x": 7.5831, "y": 2.9601 }
+                ]
+              }
+            ],
+            "content": "15.00",
+            "spans": [{ "offset": 3016, "length": 5 }],
+            "confidence": 0.751
+          },
+          "Description": {
+            "kind": "string",
+            "value": "House Bill Fund to Combat Violent Crimes Fee - 11 Del. C. § 4101(j)",
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 0.5014, "y": 2.8503 },
+                  { "x": 3.868, "y": 2.8503 },
+                  { "x": 3.868, "y": 2.9935 },
+                  { "x": 0.5014, "y": 2.9935 }
+                ]
+              }
+            ],
+            "content": "House Bill Fund to Combat Violent Crimes Fee - 11 Del. C. § 4101(j)",
+            "spans": [{ "offset": 2946, "length": 67 }],
+            "confidence": 0.455
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 2,
+            "polygon": [
+              { "x": 0.5014, "y": 2.8503 },
+              { "x": 7.841, "y": 2.8503 },
+              { "x": 7.841, "y": 2.9935 },
+              { "x": 0.5014, "y": 2.9935 }
+            ]
+          }
+        ],
+        "content": "House Bill Fund to Combat Violent Crimes Fee - 11 Del. C. § 4101(j)\n$\n15.00",
+        "spans": [{ "offset": 2946, "length": 75 }],
+        "confidence": 0.625
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": { "amount": 25, "currencyCode": "USD" },
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 7.5736, "y": 3.1224 },
+                  { "x": 7.841, "y": 3.1224 },
+                  { "x": 7.841, "y": 3.2274 },
+                  { "x": 7.5736, "y": 3.2274 }
+                ]
+              }
+            ],
+            "content": "25.00",
+            "spans": [{ "offset": 3058, "length": 5 }],
+            "confidence": 0.703
+          },
+          "Description": {
+            "kind": "string",
+            "value": "Civil Penalty - 21 Del. C. § 4129",
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 0.5014, "y": 3.1128 },
+                  { "x": 2.0963, "y": 3.1128 },
+                  { "x": 2.0963, "y": 3.2513 },
+                  { "x": 0.5014, "y": 3.2513 }
+                ]
+              }
+            ],
+            "content": "Civil Penalty - 21 Del. C. § 4129",
+            "spans": [{ "offset": 3022, "length": 33 }],
+            "confidence": 0.432
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 2,
+            "polygon": [
+              { "x": 0.5014, "y": 3.1128 },
+              { "x": 7.841, "y": 3.1128 },
+              { "x": 7.841, "y": 3.2513 },
+              { "x": 0.5014, "y": 3.2513 }
+            ]
+          }
+        ],
+        "content": "Civil Penalty - 21 Del. C. § 4129\n$\n25.00",
+        "spans": [{ "offset": 3022, "length": 41 }],
+        "confidence": 0.601
+      },
+      {
+        "kind": "object",
+        "properties": {
+          "Amount": {
+            "kind": "currency",
+            "value": { "amount": 12.5, "currencyCode": "USD" },
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 7.5831, "y": 3.385 },
+                  { "x": 7.841, "y": 3.385 },
+                  { "x": 7.841, "y": 3.49 },
+                  { "x": 7.5784, "y": 3.49 }
+                ]
+              }
+            ],
+            "content": "12.50",
+            "spans": [{ "offset": 3116, "length": 5 }],
+            "confidence": 0.712
+          },
+          "Description": {
+            "kind": "string",
+            "value": "Civil Penalty Surcharge - 11 Del. C. § 4101(g)(1)",
+            "boundingRegions": [
+              {
+                "pageNumber": 2,
+                "polygon": [
+                  { "x": 0.5014, "y": 3.3754 },
+                  { "x": 2.8938, "y": 3.3754 },
+                  { "x": 2.8938, "y": 3.5234 },
+                  { "x": 0.5014, "y": 3.5234 }
+                ]
+              }
+            ],
+            "content": "Civil Penalty Surcharge - 11 Del. C. § 4101(g)(1)",
+            "spans": [{ "offset": 3064, "length": 49 }],
+            "confidence": 0.443
+          }
+        },
+        "boundingRegions": [
+          {
+            "pageNumber": 2,
+            "polygon": [
+              { "x": 0.5014, "y": 3.3754 },
+              { "x": 7.841, "y": 3.3754 },
+              { "x": 7.841, "y": 3.5234 },
+              { "x": 0.5014, "y": 3.5234 }
+            ]
+          }
+        ],
+        "content": "Civil Penalty Surcharge - 11 Del. C. § 4101(g)(1)\n$\n12.50",
+        "spans": [{ "offset": 3064, "length": 57 }],
+        "confidence": 0.575
+      }
+    ]
+  },
+  "RemittanceAddress": {
+    "kind": "address",
+    "value": {
+      "poBox": "P.O. Box 697",
+      "city": "Dover",
+      "state": "DE",
+      "postalCode": "19903-0697",
+      "streetAddress": "P.O. Box 697"
+    },
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 1.8671, "y": 8.0877 },
+          { "x": 2.9368, "y": 8.0877 },
+          { "x": 2.9368, "y": 8.3359 },
+          { "x": 1.8671, "y": 8.3359 }
+        ]
+      }
+    ],
+    "content": "P.O. Box 697\nDover, DE 19903-0697",
+    "spans": [{ "offset": 1456, "length": 33 }],
+    "confidence": 0.881
+  },
+  "RemittanceAddressRecipient": {
+    "kind": "string",
+    "value": "Delaware Department of Transportation\nDelaware E-ZPass Violations Center",
+    "boundingRegions": [
+      {
+        "pageNumber": 1,
+        "polygon": [
+          { "x": 1.8671, "y": 7.8251 },
+          { "x": 3.7916, "y": 7.8251 },
+          { "x": 3.7916, "y": 8.0829 },
+          { "x": 1.8671, "y": 8.0829 }
+        ]
+      }
+    ],
+    "content": "Delaware Department of Transportation\nDelaware E-ZPass Violations Center",
+    "spans": [
+      { "offset": 1353, "length": 37 },
+      { "offset": 1400, "length": 34 }
+    ],
+    "confidence": 0.84
+  },
+  "VendorName": {
+    "kind": "string",
+    "value": "DelDOT's",
+    "boundingRegions": [
+      {
+        "pageNumber": 2,
+        "polygon": [
+          { "x": 5.7685, "y": 0.5443 },
+          { "x": 6.3798, "y": 0.5443 },
+          { "x": 6.3798, "y": 0.7018 },
+          { "x": 5.7685, "y": 0.7018 }
+        ]
+      }
+    ],
+    "content": "DelDOT's",
+    "spans": [{ "offset": 2076, "length": 8 }],
+    "confidence": 0.843
+  }
+}
