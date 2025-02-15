@@ -1,6 +1,6 @@
 # OCR POC
 
-Is a Proof of Concept (POC) for Optical Character Recognition (OCR) using Azure Cognitive Services. It extracts text from images and PDFs and processes the extracted data to generate structured JSON output.
+Is Proof of Concept (POC) for Optical Character Recognition (OCR) using Azure Cognitive Services. It extracts text from images and PDFs and processes the extracted data to generate structured JSON output.
 
 # Three Different Azure AI Services Implemented in the Project
 
