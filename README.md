@@ -8,7 +8,7 @@ is a Proof of Concept (POC) for Optical Character Recognition (OCR) using Azure 
 
    - Output format is text, which requires more human effort to parse into the expected JSON output.
 
-2. **OCR Computer Vision Service with Template**
+2. **OCR Computer Vision Service with Template**                    
 
    - Uses the same OCR service but parses the text data into a template to return the expected JSON output.
 
