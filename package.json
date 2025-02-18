@@ -30,6 +30,7 @@
     "@azure/identity": "^4.6.0",
     "@azure/openai": "^2.0.0",
     "async": "^3.2.6",
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "ms-rest-azure": "^3.0.2",

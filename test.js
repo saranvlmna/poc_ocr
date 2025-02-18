@@ -1,44 +1,61 @@
 import axios from "axios";
-import dotenv from "dotenv";
+import { readFileSync } from "fs";
+import pdfParse from "pdf-parse";
 
-// Load environment variables from .env file
-dotenv.config();
+const azureApiKey = "YOUR_AZURE_OPENAI_API_KEY";
+const azureEndpoint = "YOUR_AZURE_OPENAI_ENDPOINT";
 
-const { post } = axios;
+async function extractPdfToText(pdfPath) {
+  const pdfBuffer = readFileSync(pdfPath);
+  const data = await pdfParse(pdfBuffer);
+  return data.text;
+}
 
-const endpoint = process.env.OPEN_AI_ENDPOINT;
-const apiKey = process.env.OPEN_AI_KEY;
+async function analyzeTextWithOpenAI(text) {
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${azureApiKey}`,
+  };
 
-// It's safer not to log the API Key. Commented out for security.
-console.log("Endpoint:", endpoint); // API Key is sensitive and should not be logged.
+  const data = {
+    prompt: `Extract structured information from the following text and return it as a JSON object:\n\n${text}`,
+    max_tokens: 1000,
+    temperature: 0.5,
+    top_p: 1,
+    n: 1,
+    stop: ["\n"],
+  };
 
-const prompt = "What is the capital of France?";
-
-async function getAIResponse() {
   try {
-    const response = await post(
-      `https://saran-m7abe38g-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview`, // Added missing slash
-      {
-        messages: [{ role: "user", content: prompt }], // Corrected to match chat-based API structure
-        max_tokens: 50,
-        temperature: 0.7,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-      }
+    const response = await axios.post(
+      `${azureEndpoint}/openai/deployments/YOUR_DEPLOYMENT_ID/completions?api-version=2023-02-15-preview`,
+      data,
+      { headers }
     );
-    console.log(response);
-    console.log("AI Response:", response.data.choices[0].message.content); // Adjusted to handle response format
+    return response.data.choices[0].text;
   } catch (error) {
-    console.log(error)
     console.error(
-      "Error:",
+      "Error analyzing with OpenAI:",
       error.response ? error.response.data : error.message
     );
+    return null;
   }
 }
 
-getAIResponse();
+async function main() {
+  const pdfPath = "path/to/your/file.pdf"; 
+
+  try {
+    const pdfText = await extractPdfToText(pdfPath);
+    console.log("Extracted Text:", pdfText);
+
+    const jsonResponse = await analyzeTextWithOpenAI(pdfText);
+    if (jsonResponse) {
+      console.log("Structured JSON Output:", JSON.parse(jsonResponse));
+    }
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
+
+main();
