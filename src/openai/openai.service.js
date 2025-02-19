@@ -6,9 +6,9 @@ const pdfParse = require("pdf-parse");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
 
-module.exports = async (filePath) => {
+module.exports = async (filePath, fileType) => {
   try {
-    console.log("Processing file:", filePath);
+    console.log("Processing file:", filePath, fileType);
 
     const dataBuffer = fs.readFileSync(filePath);
     const pdfData = await pdfParse(dataBuffer);
@@ -22,7 +22,7 @@ module.exports = async (filePath) => {
     const response = await axios.post(
       OPENAI_API_URL,
       {
-        model: "gpt-4-turbo",
+        model: "gpt-4o-mini",
         messages: [
           {
             role: "system",
