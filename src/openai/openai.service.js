@@ -4,7 +4,7 @@ const fs = require("fs");
 const pdfParse = require("pdf-parse");
 const Tesseract = require("tesseract.js");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
+const OPENAI_API_URL = process.env.OPEN_AI_ENDPOINT;
 
 const extractTextFromPDF = async (filePath) => {
   try {
