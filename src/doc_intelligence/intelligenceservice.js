@@ -5,15 +5,17 @@ const {
   DocumentAnalysisClient,
 } = require("@azure/ai-form-recognizer");
 const fs = require("fs");
-const path = require("path");
-const imagePath = path.join(__dirname, "../../assets/tollviolation.pdf");
-const imageBuffer = fs.readFileSync(imagePath);
 const endpoint = process.env.DI_ENDPOINT;
 const apiKey = process.env.DI_KEY;
+// const path = require("path");
+// const imagePath = path.join(__dirname, "../../assets/tollviolation.pdf");
+// const imageBuffer = fs.readFileSync(imagePath);
 //models: "prebuilt-invoice" "prebuilt-layout" "prebuilt-read" "prebuilt-document" "prebuilt-tax.us.w2" "prebuilt-invoice"
 
-module.exports = async () => {
+module.exports = async (file) => {
   try {
+    const imagePath = file;
+    const imageBuffer = fs.readFileSync(imagePath);
     const client = new DocumentAnalysisClient(
       endpoint,
       new AzureKeyCredential(apiKey)

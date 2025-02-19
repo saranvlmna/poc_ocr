@@ -5,6 +5,6 @@ const intelligencecontroller = require("./doc_intelligence/intelligencecontrolle
 const upload = multer({ dest: "uploads/" });
 
 router.post("/vision", upload.single("file"), azurecontroller);
-router.post("/intelligence", intelligencecontroller);
+router.post("/intelligence",upload.single("file"), intelligencecontroller);
 
 module.exports = router;
