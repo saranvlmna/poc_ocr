@@ -1,20 +1,28 @@
 require("dotenv").config();
 const axios = require("axios");
 const fs = require("fs");
+const pdfParse = require("pdf-parse");
 
-const AZURE_OPENAI_API_KEY = process.env.AZURE_OPENAI_API_KEY;
-const AZURE_OPENAI_ENDPOINT = process.env.AZURE_OPENAI_ENDPOINT;
-const AZURE_OPENAI_MODEL_NAME = process.env.AZURE_OPENAI_MODEL_NAME;
-const AZURE_OPENAI_MODEL_VERSION = process.env.AZURE_OPENAI_MODEL_VERSION;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
 
 module.exports = async (filePath) => {
   try {
     console.log("Processing file:", filePath);
-    const base64Data = fs.readFileSync(filePath).toString("base64");
+
+    const dataBuffer = fs.readFileSync(filePath);
+    const pdfData = await pdfParse(dataBuffer);
+
+    const extractedText = pdfData.text;
+
+    if (!extractedText.trim()) {
+      throw new Error("No text found in PDF.");
+    }
 
     const response = await axios.post(
-      `${AZURE_OPENAI_ENDPOINT}/openai/deployments/${AZURE_OPENAI_MODEL_NAME}/chat/completions?api-version=${AZURE_OPENAI_MODEL_VERSION}`,
+      OPENAI_API_URL,
       {
+        model: "gpt-4-turbo",
         messages: [
           {
             role: "system",
@@ -22,22 +30,25 @@ module.exports = async (filePath) => {
           },
           {
             role: "user",
-            content: "Extract structured JSON from this PDF file.",
+            content: extractedText,
           },
         ],
-        file: base64Data,
         max_tokens: 1500,
       },
       {
         headers: {
           "Content-Type": "application/json",
-          "api-key": AZURE_OPENAI_API_KEY,
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
       }
     );
 
-    console.log("Response Data:", response.data);
-    return response.data.choices[0].message.content;
+    const jsonString = response.data.choices[0].message.content.trim();
+    const cleanedJsonString = jsonString.replace(/^```json\n|```$/g, "");
+    const jsonData = JSON.parse(cleanedJsonString);
+
+    console.log("Extracted JSON Data:", jsonData);
+    return jsonData;
   } catch (error) {
     console.error("Error:", error.response?.data || error.message);
   }
