@@ -2,9 +2,7 @@ require("dotenv").config();
 const axios = require("axios");
 const { promisify } = require("util");
 const sleep = promisify(setTimeout);
-const {
-  ComputerVisionClient,
-} = require("@azure/cognitiveservices-computervision");
+const { ComputerVisionClient } = require("@azure/cognitiveservices-computervision");
 const { ApiKeyCredentials } = require("@azure/ms-rest-js");
 
 const key = process.env.API_KEY;
@@ -20,18 +18,15 @@ const extractTextFromURL = async (fileUrl) => {
   try {
     const result = await computerVisionClient.read(fileUrl);
     const operationLocation = result.operationLocation;
-    if (!operationLocation)
-      throw new Error("No operation location found in response.");
+    if (!operationLocation) throw new Error("No operation location found in response.");
 
     let operationId = operationLocation.split("/").pop();
 
     while (true) {
       await sleep(1000);
       let response = await computerVisionClient.getReadResult(operationId);
-      if (response.status === "succeeded")
-        return formatOcrResults(response.analyzeResult.readResults);
-      if (response.status === "failed")
-        throw new Error("Text recognition failed.");
+      if (response.status === "succeeded") return formatOcrResults(response.analyzeResult.readResults);
+      if (response.status === "failed") throw new Error("Text recognition failed.");
     }
   } catch (error) {
     console.error("Error extracting text:", error.message);
@@ -40,9 +35,7 @@ const extractTextFromURL = async (fileUrl) => {
 
 const formatOcrResults = (readResults) => {
   return readResults
-    .flatMap((result) =>
-      result.lines.map((line) => line.words.map((w) => w.text).join(" "))
-    )
+    .flatMap((result) => result.lines.map((line) => line.words.map((w) => w.text).join(" ")))
     .join("\n");
 };
 
@@ -71,15 +64,9 @@ const processTextWithOpenAI = async (text) => {
       }
     );
 
-    return JSON.parse(
-      response.data.choices[0].message.content
-        .trim()
-        .replace(/^```json\n|```$/g, "")
-    );
+    return JSON.parse(response.data.choices[0].message.content.trim().replace(/^```json\n|```$/g, ""));
   } catch (error) {
-    throw new Error(
-      "OpenAI processing error: " + (error.response?.data || error.message)
-    );
+    throw new Error("OpenAI processing error: " + (error.response?.data || error.message));
   }
 };
 
