@@ -5,8 +5,8 @@ const sleep = promisify(setTimeout);
 const { ComputerVisionClient } = require("@azure/cognitiveservices-computervision");
 const { ApiKeyCredentials } = require("@azure/ms-rest-js");
 
-const key = process.env.API_KEY;
-const endpoint = process.env.END_POINT;
+const key = process.env.AZURE_VISION_KEY;
+const endpoint = process.env.AZURE_VISION_ENDPOINT;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const computerVisionClient = new ComputerVisionClient(

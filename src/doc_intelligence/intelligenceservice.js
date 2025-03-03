@@ -1,25 +1,17 @@
 const dotenv = require("dotenv");
 dotenv.config();
-const {
-  AzureKeyCredential,
-  DocumentAnalysisClient,
-} = require("@azure/ai-form-recognizer");
+const { AzureKeyCredential, DocumentAnalysisClient } = require("@azure/ai-form-recognizer");
 const fs = require("fs");
-const endpoint = process.env.DI_ENDPOINT;
-const apiKey = process.env.DI_KEY;
-// const path = require("path");
-// const imagePath = path.join(__dirname, "../../assets/tollviolation.pdf");
-// const imageBuffer = fs.readFileSync(imagePath);
+const endpoint = process.env.AZURE_DOCINTELLIGENCE_KEY;
+const apiKey = process.env.AZURE_DOCINTELLIGENCE_ENDPOINT;
 //models: "prebuilt-invoice" "prebuilt-layout" "prebuilt-read" "prebuilt-document" "prebuilt-tax.us.w2" "prebuilt-invoice"
 
 module.exports = async (file) => {
   try {
+    console.log("Processing...");
     const imagePath = file;
     const imageBuffer = fs.readFileSync(imagePath);
-    const client = new DocumentAnalysisClient(
-      endpoint,
-      new AzureKeyCredential(apiKey)
-    );
+    const client = new DocumentAnalysisClient(endpoint, new AzureKeyCredential(apiKey));
 
     const model = "prebuilt-invoice";
     const poller = await client.beginAnalyzeDocument(model, imageBuffer);
@@ -29,7 +21,6 @@ module.exports = async (file) => {
     } = await poller.pollUntilDone();
 
     const data = result.fields;
-    console.log("Analysis Result:", JSON.stringify(data));
     return data;
   } catch (error) {
     console.error("Error:", error.message);
