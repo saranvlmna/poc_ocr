@@ -2,8 +2,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 const { AzureKeyCredential, DocumentAnalysisClient } = require("@azure/ai-form-recognizer");
 const fs = require("fs");
-const endpoint = process.env.AZURE_DOCINTELLIGENCE_KEY;
-const apiKey = process.env.AZURE_DOCINTELLIGENCE_ENDPOINT;
+const endpoint = process.env.AZURE_DOCINTELLIGENCE_ENDPOINT;
+const apiKey = process.env.AZURE_DOCINTELLIGENCE_KEY;
 //models: "prebuilt-invoice" "prebuilt-layout" "prebuilt-read" "prebuilt-document" "prebuilt-tax.us.w2" "prebuilt-invoice"
 
 module.exports = async (file) => {

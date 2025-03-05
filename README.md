@@ -55,8 +55,8 @@ Before setting up the project, ensure you have the following:
    ```ini
    AZURE_VISION_ENDPOINT="your_computer_vision_endpoint"
    AZURE_VISION_KEY="your_computer_vision_api_key"
-   AZURE_DOCINTELLIGENCE_ENDPOINT="your_document_intelligence_api_key"
-   AZURE_DOCINTELLIGENCE_KEY="your_document_intelligence_endpoint"
+   AZURE_DOCINTELLIGENCE_ENDPOINT=" your_document_intelligence_endpoint"
+   AZURE_DOCINTELLIGENCE_KEY="your_document_intelligence_api_key"
 
    OPEN_AI_ENDPOINT="your_openai_endpoint"
    OPENAI_API_KEY="your_openai_api_key"
